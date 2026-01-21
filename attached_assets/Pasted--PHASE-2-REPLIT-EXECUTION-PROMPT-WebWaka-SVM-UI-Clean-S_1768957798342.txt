@@ -1,0 +1,175 @@
+
+✅ PHASE 2 — REPLIT EXECUTION PROMPT
+
+WebWaka SVM UI (Clean-Slate, Constitution-Compliant)
+
+⸻
+
+CONTEXT (READ FIRST — NON-NEGOTIABLE)
+
+You are executing Phase 2 of the WebWaka SVM UI rebuild.
+
+This repository was intentionally recreated and contains ONLY a README.md.
+That is correct and expected.
+
+Your previous behavior of auto-creating placeholder UI files was incorrect for this project.
+
+This task requires strict procedural execution.
+
+⸻
+
+🚫 ABSOLUTE PROHIBITIONS (HARD STOP CONDITIONS)
+
+If ANY of the following occur, you MUST STOP IMMEDIATELY and ask for clarification:
+	•	❌ Auto-scaffolding a UI because the repo is empty
+	•	❌ Creating placeholder HTML, static pages, or demo apps
+	•	❌ Creating replit.md automatically
+	•	❌ Running a dev server before explicit instruction
+	•	❌ Committing or pushing any file before Phase 2 instructions are complete
+	•	❌ Assuming UI structure, routes, or components
+	•	❌ Using USD ($) anywhere (Nigeria-first rule)
+
+If the repository is empty → WAIT.
+Empty repo ≠ permission to scaffold.
+
+⸻
+
+SOURCE OF TRUTH (IMMUTABLE)
+	•	Repository: changerplanet/webwaka-suite-svm-ui
+	•	Branch: main
+	•	Control Layers (MANDATORY CONSUMPTION):
+	•	webwaka-suite-svm-control
+	•	webwaka-core-dashboard-control
+	•	Constitution: WebWaka Ecosystem Constitution v1.5+
+
+All visibility, access, and navigation decisions must flow through Phase 4A control engines.
+
+⸻
+
+PHASE 2 OBJECTIVE
+
+Build the WebWaka SVM UI as:
+	•	A pure UI consumer
+	•	Fully declarative
+	•	Nigeria-first (₦ only)
+	•	Deterministic
+	•	Offline-capable
+	•	Control-driven (no hardcoded permissions)
+
+⸻
+
+REQUIRED EXECUTION SEQUENCE (STRICT ORDER)
+
+1️⃣ CLONE & VERIFY (MANDATORY FIRST STEP)
+	1.	Clone the repository from GitHub.
+	2.	Verify contents:
+	•	✅ README.md exists
+	•	❌ No app code exists
+	3.	DO NOT CREATE ANY FILES YET
+	4.	Explicitly acknowledge:
+
+“Repository verified empty as expected. Awaiting Phase 2 build instructions.”
+
+⸻
+
+2️⃣ INITIALIZE PROJECT (ONLY AFTER VERIFICATION)
+
+After confirmation, initialize exactly:
+	•	Framework: Next.js 14 (App Router)
+	•	Language: TypeScript
+	•	Styling: Tailwind CSS
+	•	Testing: Jest + React Testing Library
+
+⚠️ No demo data
+⚠️ No placeholder UI
+⚠️ No sample currency values
+
+⸻
+
+3️⃣ CURRENCY & LOCALE (NON-NEGOTIABLE)
+	•	Currency: Nigerian Naira (₦) ONLY
+	•	Locale: en-NG
+	•	Any numeric values shown must be:
+	•	Mocked
+	•	Explicitly labeled as Sample
+	•	Formatted in ₦
+
+USD is constitutionally forbidden.
+
+⸻
+
+4️⃣ CONTROL LAYER CONSUMPTION (MANDATORY)
+
+You MUST consume:
+	•	webwaka-suite-svm-control
+	•	webwaka-core-dashboard-control
+
+Create one and only one control entry point:
+
+src/lib/control-consumer.ts
+
+No other file may import control packages directly.
+
+UI visibility must be driven by:
+	•	resolveDashboard
+	•	Snapshot evaluation
+	•	No local gating logic
+
+⸻
+
+5️⃣ UI SCOPE (DO NOT EXPAND)
+
+Implement only:
+	•	Layout
+	•	Navigation
+	•	Section containers
+	•	Snapshot-driven rendering
+
+❌ No business logic
+❌ No backend APIs
+❌ No payments
+❌ No pricing logic
+
+⸻
+
+6️⃣ TESTING & VERIFICATION (REQUIRED)
+
+Before committing:
+	•	✅ npm test passes
+	•	✅ Determinism test (10× same output)
+	•	✅ Snapshot integrity test
+	•	✅ No hardcoded permissions/flags
+	•	✅ No USD anywhere
+
+⸻
+
+7️⃣ COMMIT & PUSH (FINAL STEP)
+	•	Single clean commit
+	•	Message:
+
+Phase 5C SVM UI — Constitution-Compliant Initial Implementation
+
+
+	•	Push to main
+	•	Do NOT create branches
+
+⸻
+
+HARD STOP
+
+After push:
+
+⛔ STOP
+⛔ Do NOT add features
+⛔ Do NOT scaffold further
+⛔ Await Manus verification
+
+⸻
+
+ACKNOWLEDGEMENT REQUIRED
+
+Reply only with:
+
+“Acknowledged. Repo will be treated as intentionally empty. No scaffolding will occur until instructed.”
+
+Then proceed.
