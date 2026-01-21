@@ -1,0 +1,182 @@
+
+🔐 PHASE 2.1 — DEPENDENCY HYGIENE (REPLIT EXECUTION PROMPT)
+
+CONTEXT (READ CAREFULLY)
+
+You are executing Phase 2.1 — Dependency Hygiene for:
+
+Repository:
+changerplanet/webwaka-suite-svm-ui
+
+This phase exists solely to address a known development-dependency security advisory identified during Phase 2 ratification.
+
+This is a HYGIENE PATCH, not feature work.
+
+⸻
+
+🚫 ABSOLUTE PROHIBITIONS (NON-NEGOTIABLE)
+
+You MUST NOT:
+	•	❌ Add or change any UI behavior
+	•	❌ Modify dashboard structure or layout
+	•	❌ Touch permissions, entitlements, or feature flags
+	•	❌ Add new dependencies unrelated to the advisory
+	•	❌ Change architecture or control-layer integration points
+	•	❌ Introduce new features, mocks, or stubs
+	•	❌ Silence or downgrade security tooling
+
+Any violation = constitutional breach
+
+⸻
+
+🎯 OBJECTIVE
+
+Resolve the development-dependency security advisory:
+	•	Advisory: glob command injection (GHSA-5j98-mcp5-4vw2)
+	•	Scope: Development dependencies only
+	•	Entry path: eslint-config-next
+	•	Runtime impact: NONE
+
+After completion:
+	•	npm audit --audit-level=high must return clean
+	•	npm run build must pass
+	•	npm test must pass
+	•	No behavioral or architectural changes introduced
+
+⸻
+
+📌 REQUIRED PRECONDITION (MANDATORY)
+
+Before doing anything else:
+	1.	CLONE THE REPOSITORY
+
+git clone https://github.com/changerplanet/webwaka-suite-svm-ui.git
+
+
+	2.	Confirm:
+	•	Branch: main
+	•	Clean working tree
+	•	No uncommitted changes
+
+If cloning fails → STOP and report
+
+⸻
+
+✅ REQUIRED ACTIONS (STEP BY STEP)
+
+1️⃣ Identify Vulnerable Dependency Path
+	•	Run:
+
+npm audit --audit-level=high
+
+
+	•	Confirm vulnerability originates from:
+	•	glob
+	•	via eslint-config-next
+	•	Capture the dependency tree mentally (no screenshots required)
+
+⸻
+
+2️⃣ Apply Minimal Safe Upgrade
+
+You must:
+	•	Upgrade only what is necessary to remove the advisory
+	•	Prefer:
+	•	npm update
+	•	or targeted version bump in package.json
+	•	Do not replace tooling (no eslint removal, no framework swap)
+
+The goal is removal, not redesign.
+
+⸻
+
+3️⃣ Re-install Cleanly
+
+After changes:
+
+rm -rf node_modules package-lock.json
+npm install
+
+This ensures:
+	•	No cached vulnerable versions
+	•	Lockfile reflects the fix
+
+⸻
+
+4️⃣ Verify Hygiene (MANDATORY)
+
+Run all of the following:
+
+npm audit --audit-level=high
+npm test
+npm run build
+npm run lint
+
+All must pass with:
+	•	Exit code 0
+	•	No masked failures
+	•	No new warnings introduced
+
+⸻
+
+🔍 VERIFICATION CHECKLIST (YOU MUST SELF-VERIFY)
+
+Before committing, confirm:
+	•	✅ No source files changed (only dependency files)
+	•	✅ No UI files modified
+	•	✅ No control-layer files touched
+	•	✅ No new vulnerabilities introduced
+	•	✅ No dependency removed unnecessarily
+
+⸻
+
+📦 COMMIT REQUIREMENTS
+	•	Commit message (EXACT FORMAT):
+
+chore(security): resolve dev dependency advisory (glob)
+
+
+	•	Files allowed to change:
+	•	package.json
+	•	package-lock.json
+	•	NOTHING else
+
+⸻
+
+📄 REQUIRED FINAL REPORT (IN CHAT)
+
+After pushing to main, report only the following:
+
+Phase 2.1 Dependency Hygiene — COMPLETE
+
+✔ npm audit --audit-level=high: clean
+✔ npm test: pass
+✔ npm run build: pass
+✔ npm run lint: pass
+
+Changed files:
+- package.json
+- package-lock.json
+
+No behavioral or architectural changes introduced.
+
+
+⸻
+
+⛔ HARD STOP
+
+After submitting the report:
+
+⛔ STOP
+⛔ Do NOT proceed to Phase 3
+⛔ Await formal re-verification and authorization
+
+⸻
+
+ACKNOWLEDGEMENT FORMAT (REQUIRED)
+
+Reply only with:
+
+“Phase 2.1 acknowledged. Proceeding with dependency hygiene exactly as instructed.”
+
+Then execute.
