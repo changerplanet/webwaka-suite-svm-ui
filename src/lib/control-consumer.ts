@@ -62,6 +62,7 @@ export async function evaluateSnapshot(
    * Navigation, sections, and permissions will be resolved
    * by the control layer based on context.
    */
+  void context;
   return {
     navigation: [],
     sections: [],
