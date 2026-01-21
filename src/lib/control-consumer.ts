@@ -7,6 +7,9 @@
  * 
  * All UI visibility decisions must flow through this module.
  * No other file may import control packages directly.
+ * 
+ * INTEGRATION NOTE: When control packages are available, replace
+ * the stub implementations with actual control layer calls.
  */
 
 import type { 
@@ -18,6 +21,7 @@ import type {
 } from '@/types/control';
 
 const LOCALE = 'en-NG';
+const DETERMINISTIC_TIMESTAMP = 0;
 
 export function getLocale(): string {
   return LOCALE;
@@ -34,6 +38,10 @@ export function formatCurrency(amount: number): string {
 export async function resolveDashboard(
   context: ControlContext
 ): Promise<ResolvedDashboard> {
+  /**
+   * INTEGRATION POINT: Replace with actual control layer resolution
+   * return await svmControl.resolveDashboard(context);
+   */
   const snapshot = await evaluateSnapshot(context);
   
   return {
@@ -47,15 +55,22 @@ export async function resolveDashboard(
 export async function evaluateSnapshot(
   context: ControlContext
 ): Promise<DashboardSnapshot> {
+  /**
+   * INTEGRATION POINT: Replace with actual snapshot evaluation
+   * return await dashboardControl.evaluateSnapshot(context);
+   * 
+   * Navigation, sections, and permissions will be resolved
+   * by the control layer based on context.
+   */
   return {
     navigation: [],
     sections: [],
     permissions: {
-      canView: true,
+      canView: false,
       canEdit: false,
       canManage: false,
     },
-    timestamp: Date.now(),
+    timestamp: DETERMINISTIC_TIMESTAMP,
   };
 }
 

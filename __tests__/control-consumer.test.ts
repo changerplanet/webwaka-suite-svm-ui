@@ -61,15 +61,20 @@ describe('Control Consumer', () => {
       expect(Array.isArray(snapshot.sections)).toBe(true);
     });
 
-    it('should return deterministic results', async () => {
+    it('should return deterministic results including timestamp', async () => {
       const results = await Promise.all(
         Array(10).fill(null).map(() => evaluateSnapshot({}))
       );
       
+      const firstResult = JSON.stringify(results[0]);
       results.forEach(result => {
-        expect(result.navigation).toEqual([]);
-        expect(result.sections).toEqual([]);
+        expect(JSON.stringify(result)).toBe(firstResult);
       });
+    });
+
+    it('should use deterministic timestamp', async () => {
+      const snapshot = await evaluateSnapshot({});
+      expect(snapshot.timestamp).toBe(0);
     });
   });
 });

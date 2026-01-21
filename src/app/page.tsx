@@ -1,7 +1,7 @@
 import { Layout } from '@/components/Layout';
 import { SectionContainer } from '@/components/SectionContainer';
 import { resolveDashboard } from '@/lib/control-consumer';
-import type { SectionConfig, NavigationItem } from '@/types/control';
+import type { SectionConfig } from '@/types/control';
 
 export default async function Home() {
   const dashboard = await resolveDashboard({});
@@ -21,15 +21,6 @@ export default async function Home() {
         {dashboard.sections.map((section: SectionConfig) => (
           <SectionContainer key={section.id} section={section} />
         ))}
-        
-        {dashboard.sections.length === 0 && (
-          <div className="text-center py-12 text-slate-500">
-            <p>Control layer integration pending.</p>
-            <p className="text-sm mt-2">
-              Sections will render based on snapshot evaluation.
-            </p>
-          </div>
-        )}
       </div>
     </Layout>
   );
